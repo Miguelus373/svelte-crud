@@ -16,9 +16,9 @@
 
   <h1>{title}</h1>
   <span>{author}</span>
-  <Lorem count={4} />
-  <Lorem count={2} />
-  <Lorem count={3} />
+  <Lorem count={Math.floor(Math.random() * 4) + 1} />
+  <Lorem count={Math.floor(Math.random() * 4) + 1} />
+  <Lorem count={Math.floor(Math.random() * 4) + 1} />
 </div>
 
 <style>
