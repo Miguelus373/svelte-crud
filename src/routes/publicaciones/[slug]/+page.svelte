@@ -9,22 +9,27 @@
 
   $: title = publicacion ? publicacion.title : 'Loading...';
   $: author = publicacion ? publicacion.author : 'Unknown';
+
+  export let data;
 </script>
 
 <div>
   <a href="/publicaciones">Volver</a> 
-
-  <h1>{title}</h1>
-  <span>{author}</span>
-  <Lorem count={Math.floor(Math.random() * 4) + 1} />
-  <Lorem count={Math.floor(Math.random() * 4) + 1} />
-  <Lorem count={Math.floor(Math.random() * 4) + 1} />
+  
+  <h1>{data.post.title}</h1>
+  <span>ID: {data.post.id}</span>
+  <p>{data.post.body}</p>
 </div>
 
 <style>
   div { 
-    max-width: 70vw;
+    max-width: 50vw;
     margin: 2rem auto;
+  }
+
+  p {
+    padding: 1rem 0;
+    text-align: justify;
   }
 
   h1 {

@@ -1,19 +1,36 @@
 <script>
   export let title;
-  export let author;
-  export let slug;
+  export let id;
+  export let cuerpo;
 </script>
 
-<a href={`/publicaciones/${slug}`}>
-  <h1>{title}</h1>
-  <span>Autor: {author}</span>
-</a>
+<div>
+  <a class="post" href={`/publicaciones/${id}`}>
+    <h1>{title}</h1>
+    <span>ID: {id}</span>
+    <p>{cuerpo}</p>
+  </a>
+  <a class="edit" href={`/publicaciones/${id}/editar`}>
+    Editar
+  </a>
+</div>
 
 <style>
-  a {
+  div {
+    position: relative;
+  }
+  
+  .edit {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    padding: 4px 8px;
+  }
+  
+  .post {
     display: inline-block;
     width: 20rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 3.5rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -33,6 +50,15 @@
   h1 {
     font-size: 22px;
     margin-bottom: 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  p {
+    height: 6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   span {
