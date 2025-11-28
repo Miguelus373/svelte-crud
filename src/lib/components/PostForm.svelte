@@ -3,9 +3,14 @@
 	export let cuerpo = '';
   export let title = '';
   export let action = '';
+  export let id;
 </script>
 
-<form action={action}>
+<form method="POST" action={action}>
+  {#if id}
+    <input type="hidden" value={id} name="id">
+  {/if}
+  
   <h1>{title}</h1>
 
   <label for="nombre">Nombre de la publicaión</label>

@@ -6,7 +6,13 @@
 <div>
 	<a href="/publicaciones">Volver</a>
 
-	<PostForm title="Editar Publicaión" nombre={data.post.title} cuerpo={data.post.body} />
+	<PostForm
+		action="?/update"
+		id={data.post.id}
+		title="Editar Publicaión"
+		nombre={data.post.title}
+		cuerpo={data.post.body}
+	/>
 </div>
 
 <style>

@@ -5,7 +5,7 @@
 <div>
 	<a href="/publicaciones">Volver</a>
 
-	<PostForm title="Crear Publicaión" />
+	<PostForm title="Crear Publicaión" action="?/create" />
 </div>
 
 <style>
